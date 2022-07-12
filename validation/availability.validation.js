@@ -10,8 +10,8 @@ const validate = require('./validate');
         before: Joi.date().timestamp('unix').optional(),
         num_slots: Joi.number().optional()
     })
-    
+
     return validate(schema, req.query, next)
 }
 
-module.exports = get
+module.exports = { get }
