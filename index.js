@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+const compression = require('compression');
 const express = require('express')
 const app = express()
 const host = process.env.HOST_NAME
@@ -9,6 +10,9 @@ const reservationRoute = require("./routes/reservation.route");
 const regionRoute = require("./routes/region.route");
 const availabilityRoute = require("./routes/availability.route");
 
+app.use(compression());
+app.use(express.json());
+
 app.use("/reservation", reservationRoute);
 app.use("/region", regionRoute);
 app.use("/availability", availabilityRoute);
@@ -16,6 +20,7 @@ app.use("/availability", availabilityRoute);
 app.all("/*", (req, res, next) => {
 	console.log(req.url);
 	next({
+		satus: 404,
 		error: "Not found",
 	});
 });

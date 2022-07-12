@@ -4,22 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArturAlcoverro/kReservations.git"
+    "url": "git+https://github.com/ArturAlcoverro/kReservationsApi-main.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ArturAlcoverro/kReservations/issues"
+    "url": "https://github.com/ArturAlcoverro/kReservationsApi-main/issues"
   },
-  "homepage": "https://github.com/ArturAlcoverro/kReservations#readme",
+  "homepage": "https://github.com/ArturAlcoverro/kReservationsApi-main#readme",
   "dependencies": {
     "compression": "^1.7.4",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "pg": "^8.7.3"
+    "joi": "^17.6.0",
+    "postgres": "^3.2.4"
   }
 }
