@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "5ecd2728-9663-48e4-9cdb-2b087725c9cc",
+		"name": "kReservationApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7047985"
+	},
+	"item": [
+		{
+			"name": "/reservation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reservation?phone=%2b12341231004",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reservation"
+					],
+					"query": [
+						{
+							"key": "before",
+							"value": "1657496205",
+							"disabled": true
+						},
+						{
+							"key": "after",
+							"value": "1557496205",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "Justin@mail.com",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "%2b12341231004"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/reservation/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reservation/336bd3ab-1039-4f13-a60e-8a25e748bf9f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reservation",
+						"336bd3ab-1039-4f13-a60e-8a25e748bf9f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/reservation/{id}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reservationDate\": \"1657659600\",\r\n    \"regionId\": \"1d7575e8-951b-4198-a479-e6bb7dd6e460\",\r\n    \"firstName\": \"Paco\",\r\n    \"lastName\": \"Handerson\",\r\n    \"phoneNumber\": \"12341231000\",\r\n    \"email\": \"james@mail.com\",\r\n    \"numPeople\": \"5\",\r\n    \"numChildren\": \"2\",\r\n    \"isSmoker\": \"false\",\r\n    \"isBirthday\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reservation/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reservation",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/reservation/{id}",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reservationDate\": \"1654084800\",\r\n    \"regionId\": \"1d7575e8-951b-4198-a479-e6bb7dd6e460\",\r\n    \"firstName\": \"Paco\",\r\n    \"lastName\": \"Handerson\",\r\n    \"phoneNumber\": \"12341231000\",\r\n    \"email\": \"james@mail.com\",\r\n    \"numPeople\": \"6\",\r\n    \"numChildren\": \"0\",\r\n    \"isSmoker\": \"false\",\r\n    \"isBirthday\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reservation/336bd3ab-1039-4f13-a60e-8a25e748bf9f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reservation",
+						"336bd3ab-1039-4f13-a60e-8a25e748bf9f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/reservation/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reservation/336bd3ab-1039-4f13-a60e-8a25e748bf9f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reservation",
+						"336bd3ab-1039-4f13-a60e-8a25e748bf9f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/region",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/region",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"region"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/region/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/region/4594a574-8419-4e28-a1f1-ac6af70b0e53",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"region",
+						"4594a574-8419-4e28-a1f1-ac6af70b0e53"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/region/{id}",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Smoking region\",\r\n    \"forChildren\": false,\r\n    \"forSmokers\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/region/4594a574-8419-4e28-a1f1-ac6af70b0e53",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"region",
+						"4594a574-8419-4e28-a1f1-ac6af70b0e53"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/availability",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/availability/?before=1657657799&after=1657659600&num_slots=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"availability",
+						""
+					],
+					"query": [
+						{
+							"key": "before",
+							"value": "1657657799"
+						},
+						{
+							"key": "after",
+							"value": "1657659600"
+						},
+						{
+							"key": "num_slots",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
