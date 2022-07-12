@@ -1,8 +1,12 @@
 # [Back-end] kReservations
 
-## Start
+## Usage
 
-d
+To use this project make sure you have Docker installed then run the following command on your terminal:
+
+```bash
+docker-compose up
+```
 
 ## Endpoints
 
@@ -118,7 +122,7 @@ To perform this test, the following changes have been made to the database:
     - `capacity` *integer*
 
 ---
-- **tables** table added the database with the following fields
+- **reservation_tables** table added the database with the following fields
 
     - `reservation_id` *uuid*
     - `table_id` *uuid*
